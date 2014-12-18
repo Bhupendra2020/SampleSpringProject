@@ -19,3 +19,6 @@ RUN ["mvn", "verify"]
 # Adding source, compile and package into a fat jar
 ADD src /code/src
 RUN ["mvn", "package"]
+
+# Define default command.
+CMD ["bash"]
