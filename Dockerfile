@@ -20,7 +20,7 @@ RUN ["mvn", "verify"]
 
 # Adding source, compile and package into a fat jar
 
-RUN ["mvn", "clean install"]
+RUN ["mvn", "package"]
 
 # Define default command.
 CMD ["bash"]
