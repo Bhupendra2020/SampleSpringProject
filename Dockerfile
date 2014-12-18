@@ -2,6 +2,7 @@ FROM fnubhupen/oraclejava:7
 MAINTAINER Bhupendra Kumar <Bhupendra.kumar@softcrylic.com>
 
 # Install tomcat
+RUN apt-get update
 RUN apt-get -y install tomcat7
 RUN echo "JAVA_HOME=/usr/lib/jvm/java-7-oracle" >> /etc/default/tomcat7
 
