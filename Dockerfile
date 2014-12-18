@@ -29,4 +29,4 @@ ADD /code/target/SpringMVC.war /var/lib/tomcat7/webapps/
 # Expose TCP port 8080
 EXPOSE 8080
 
-CMD["/usr/share/tomcat7/bin/catalina.sh"]
+CMD ["/usr/share/tomcat7/bin/catalina.sh"]
