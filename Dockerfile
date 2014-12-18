@@ -22,5 +22,11 @@ RUN ["mvn", "verify"]
 
 RUN ["mvn", "package"]
 
-# Define default command.
-CMD ["bash"]
+# Add your webapp file into your docker image into Tomcat's webapps directory
+# Your webapp file must be at the same location as your Dockerfile
+ADD /code/target/SpringMVC.war /var/lib/tomcat7/webapps/
+
+# Expose TCP port 8080
+EXPOSE 8080
+
+CMD["/usr/share/tomcat7/bin/catalina.sh"]
